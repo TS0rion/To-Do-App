@@ -46,19 +46,18 @@ const Todo = () => {
   };
 
   useEffect(() => {
-    // console.log(todoList);
     localStorage.setItem("todos", JSON.stringify(todoList));
   }, [todoList]);
 
   return (
     <div className="bg-amber-50 place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-[20px]">
-      {/* title */}
+
       <div className="flex">
         <img className="w-7 mx-3" src={todo_icon} alt="icon" />
         <h1 className="font-bold">To-do List</h1>
       </div>
 
-      {/* Input box */}
+
       <div className="flex items-center my-7 bg-gray-50 rounded-full">
         <input
           ref={inputRef}
@@ -74,7 +73,7 @@ const Todo = () => {
         </button>
       </div>
 
-      {/* todo list */}
+
       <div>
         {todoList.map((item, index) => {
           return (
